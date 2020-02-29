@@ -95,12 +95,8 @@
             const depositNumber=parseFloat(getWithButtonAmount);
 
             updateNumbers('currentWithdraw',depositNumber);
+            updateNumbers('currentBalance', -1 * depositNumber);
             
-            const currentBalance=document.getElementById('currentBalance').innerText;
-            const currentBalanceNumber=parseFloat(currentBalance);
-            const totalBalance= currentBalanceNumber-depositNumber;
-            document.getElementById('currentBalance').innerHTML=totalBalance;
-
             document.getElementById('withdrawAmount').value="";
             })  
     </script>
